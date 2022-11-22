@@ -1,0 +1,46 @@
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border: solid #000;
+  height: 400px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); */
+  background-color: #f4e62a;
+  transform: translateY(-15px);
+  box-shadow: 0px 3px 30px #0000008b;
+}
+
+.card img {
+  /* border: red 3px solid; */
+  /* width: 100%; */
+  width: 350px;
+  height: 250px;
+}
+
+/* estilos al texto */
+.container {
+  padding: 2px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container > * {
+  /* border: red 3px solid; */
+  color: #000;
+}
+
+.container h3 {
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.container h5 {
+  font-size: 15px;
+  font-weight: bold;
+}

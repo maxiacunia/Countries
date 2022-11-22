@@ -1,0 +1,28 @@
+.searchbar-container {
+  display: flex;
+  /* border: red 3px solid; */
+  justify-content: center;
+  align-content: center;
+}
+
+.searchbar-container input {
+  border: solid #000;
+  border-radius: 10rem;
+  padding: 0.5rem 1rem;
+  color: #000;
+  transition: ease 0.4s;
+  font-size: 1rem;
+  color: #5c19ae;
+  background-color: #f4e62a;
+}
+
+.searchbar-container button {
+  border: solid #000;
+  border-radius: 10rem;
+  padding: 0.5rem 1rem;
+  color: #000;
+  transition: ease 0.4s;
+  font-size: 1rem;
+  background-color: #f4e62a;
+  cursor: pointer;
+}

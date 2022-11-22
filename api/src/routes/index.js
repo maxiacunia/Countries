@@ -12,10 +12,12 @@ const {Country, Actividad, Actividad_Pais } = require('../db.js')
 const {Op} = require('sequelize');
 const { routes } = require('../app.js');
 
-
-
-
 const router = Router();
+
+const cors = require('cors');
+router.use(cors({
+    origin: 'http://localhost:3000'
+}));
 
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
@@ -48,9 +50,26 @@ const getApiInfo = async()=>{
             population: el.population
         }
     })
-    //const newDB = await Country.bulkCreate(apiInfo)
-    //return newDB
-    return apiInfo
+    return apiInfo;
+}
+
+const getDbInfo = async ()=>{
+    return await Country.findAll({
+        include:{
+            model: Actividad,
+            attributes:['name'],
+            through:{
+                attributes:[],
+            }
+        },
+    })
+}
+
+const getAllCountries = async()=>{
+    const apiInfo = await getApiInfo();
+    const dbInfo = await getDbInfo();
+    const infoTotal = apiInfo.concat(dbInfo);
+    return infoTotal
 }
 
 router.get('/countries', async (req, res)=>{
@@ -68,19 +87,35 @@ router.get('/countries', async (req, res)=>{
             console.log(error);
         }
         if(name){
-            let countryName = await countriesAPI.filter( el => el.name.toLowerCase().includes(name.toLowerCase()))
-            countryName.length ?
-            res.status(200).send(countryName) :
-            res.status(400).send('El pais no se enceuntra')
+            // let countryName = await countriesAPI.filter( el => el.name.toLowerCase().includes(name.toLowerCase()))
+            // countryName.length ?
+            // res.status(200).send(countryName) :
+            // res.status(400).send('El pais no se enceuntra')
+            let countryName = await Country.findAll({
+                where:{
+                    name: {
+                        [Op.iLike]: '%' + name + '%'
+                    }
+                }
+            });
+            return res.json(countryName)
         } else {
-            res.status(200).send(countriesAPI)
+            //res.status(200).send(countriesAPI)
+            try {
+                let country = await Country.findAll({
+                    include: {model: Actividad}
+                });
+                return res.json(country)
+            } catch (error) {
+                console.log(error);
+            }
         }
+
 })
 
 router.post('/activities', async (req, res) => {
     //ME TRAIGO LOS DATOS DE BODY
     const {nameCountry, name, difficulty, duration, season } = req.body;
-    
     try {
         //CREO LA ACTIVIDAD EN MI DB
         const newActivity = await Actividad.create({
@@ -101,7 +136,7 @@ router.post('/activities', async (req, res) => {
     } catch (error) {
         res.status(500).json({msg: error.message})
     }
-
 })
+
 
 module.exports = router;

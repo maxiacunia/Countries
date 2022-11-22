@@ -21,6 +21,11 @@ module.exports = (sequelize) => {
     },
     season: {
         type: DataTypes.ENUM('Verano', 'Otoño', 'Invierno', 'Primavera'),
+    },
+    createdInDb:{
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: true
     }
     });
 };

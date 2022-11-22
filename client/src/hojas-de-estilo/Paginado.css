@@ -1,0 +1,32 @@
+.contenedor-pagination {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+ul.pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+ul.pagination li {
+  display: inline;
+}
+
+ul.pagination li a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: solid #000;
+  margin: 0 4px;
+  font-weight: bold;
+  background-color: #f4e62a;
+}
+
+ul.pagination li a:hover {
+  background-color: #000;
+  cursor: pointer;
+  color: aliceblue;
+}

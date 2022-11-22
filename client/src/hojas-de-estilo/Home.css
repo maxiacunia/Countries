@@ -1,0 +1,132 @@
+/* ESTILOS GENERALES DEL HOME */
+
+.home-container {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  /* background: url("../hojas-de-estilo/home-bg.jpg") no-repeat 50% 50%; */
+  background-color: #dfdcdcb8;
+  background-size: cover;
+  display: table;
+  margin: auto;
+  top: 0;
+}
+
+.inputs-container {
+  /* border: red 3px solid; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.input {
+  margin: 8px;
+}
+
+.searchbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* border: red 3px solid; */
+  justify-content: space-between;
+}
+
+.card-container > * {
+  margin: 10px;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  color: #000;
+  font-size: Roboto;
+  /* border: red 3px solid; */
+
+  background-color: #f4e62a;
+  font-weight: bold;
+}
+
+/* ESTILOS A LOS BOTONES */
+
+.create-pais-btn button {
+  cursor: pointer;
+  border: solid #000;
+  border-radius: 10rem;
+  background-color: #f4e62a;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px 15px;
+}
+
+.reload-country button {
+  cursor: pointer;
+  border: solid #000;
+  border-radius: 10rem;
+  background-color: #f4e62a;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px 15px;
+}
+
+.filter-continent select {
+  cursor: pointer;
+  border: solid #000;
+  border-radius: 10rem;
+  background-color: #f4e62a;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px 15px;
+}
+
+.filter-continent option {
+  color: #000;
+  font-weight: bold;
+}
+
+.filter-ordenamiento select {
+  cursor: pointer;
+  border: solid #000;
+  border-radius: 10rem;
+  background-color: #f4e62a;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px 15px;
+}
+
+.filter-ordenamiento option {
+  color: #000;
+  font-weight: bold;
+}
+
+.filter-population select {
+  cursor: pointer;
+  border: solid #000;
+  border-radius: 10rem;
+  background-color: #f4e62a;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px 15px;
+}
+
+.filter-population option {
+  color: #000;
+  font-weight: bold;
+}
