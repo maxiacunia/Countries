@@ -26,3 +26,8 @@
   background-color: #f4e62a;
   cursor: pointer;
 }
+
+::placeholder {
+  color: #000;
+  font-size: 1em;
+}

@@ -53,3 +53,9 @@
   margin-top: 50px;
   margin-left: 125px;
 }
+
+.error {
+  color: black;
+  font-weight: bold;
+  background-color: red;
+}

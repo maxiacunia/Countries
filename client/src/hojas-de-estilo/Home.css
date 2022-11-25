@@ -53,10 +53,12 @@
   justify-content: center;
   color: #000;
   font-size: Roboto;
+  border-bottom: #000 2px solid;
   /* border: red 3px solid; */
 
   background-color: #f4e62a;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 /* ESTILOS A LOS BOTONES */
@@ -129,4 +131,31 @@
 .filter-population option {
   color: #000;
   font-weight: bold;
+}
+
+.footer-conteiner {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-weight: bold;
+  font-style: Roboto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-elements p {
+  margin-bottom: 5px;
+}
+.iconos {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconos a {
+  color: #000;
+  margin: 5px;
+  font-size: 30px;
 }

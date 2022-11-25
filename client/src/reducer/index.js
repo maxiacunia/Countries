@@ -59,24 +59,26 @@ function rootReducer(state = initialState, action){
                 countries: sortedArr
             }
             case 'ORDER_BY_POPULATION':
-                let sorted = action.payload === 'lesspop'?
+                let sorted = action.payload === 'asc'?
                     state.countries.sort(function(a,b){
-                        if(a.population > b.population){
-                            return 1;
-                        }
-                        if(b.population > a.population){
-                            return -1;
-                        }
-                        return 0;
+                        // if(a.population > b.population){
+                        //     return 1;
+                        // }
+                        // if(b.population > a.population){
+                        //     return -1;
+                        // }
+                        // return 0;
+                        return a.population - b.population;
                     }):
                     state.countries.sort(function(a,b){
-                        if(a.population > b.population){
-                            return -1;
-                        }
-                        if(b.population > a.population){
-                            return 1;
-                        }
-                        return 0;
+                        // if(a.population > b.population){
+                        //     return -1;
+                        // }
+                        // if(b.population > a.population){
+                        //     return 1;
+                        // }
+                        // return 0;
+                        return b.population - a.population;
                     })
                 return{
                     ...state,

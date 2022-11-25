@@ -32,7 +32,6 @@ router.get('/countries/:id', async (req, res)=>{
     }
 })
 
-
 //ME TRAE LA INFO DE LA API
 const getApiInfo = async()=>{
     // TRAE TODA LA INFO QUE TIENE LA API
@@ -51,25 +50,6 @@ const getApiInfo = async()=>{
         }
     })
     return apiInfo;
-}
-
-const getDbInfo = async ()=>{
-    return await Country.findAll({
-        include:{
-            model: Actividad,
-            attributes:['name'],
-            through:{
-                attributes:[],
-            }
-        },
-    })
-}
-
-const getAllCountries = async()=>{
-    const apiInfo = await getApiInfo();
-    const dbInfo = await getDbInfo();
-    const infoTotal = apiInfo.concat(dbInfo);
-    return infoTotal
 }
 
 router.get('/countries', async (req, res)=>{
@@ -112,6 +92,7 @@ router.get('/countries', async (req, res)=>{
         }
 
 })
+
 
 router.post('/activities', async (req, res) => {
     //ME TRAIGO LOS DATOS DE BODY
