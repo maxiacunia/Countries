@@ -7,8 +7,8 @@ import Card from './Card';
 import Paginado from './Paginado';
 import SearchBar from './SearchBar'
 import '../hojas-de-estilo/Home.css'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons'
+import Footer from './Footer';
+
 
 export default function Home(){
     const dispatch = useDispatch()
@@ -104,7 +104,7 @@ export default function Home(){
                 </div>
                 <div className='searchbar'>
                         <SearchBar/>
-                    </div>
+                </div>
             <div className='pagination'>
                 <Paginado
                     countriesPerPage={countriesPerPage}
@@ -125,21 +125,7 @@ export default function Home(){
                 })
                 }            
             </div>
-            <div className='footer-conteiner'>
-                <div className='footer-elements'>
-                <p>
-                    Creado por <span>Maximiliano Acuña</span> 😀
-                </p>
-                <div className='iconos'>
-                    <a href='https://github.com/maxiacunia' target="_blank">
-                        <FontAwesomeIcon icon={faGithub} />
-                    </a>
-                    <a href='https://www.linkedin.com/in/maximiliano-acuña' target="_blank">
-                        <FontAwesomeIcon icon={faLinkedin} />
-                    </a>                   
-                </div>
-                </div>
-            </div>
+            <Footer/>
         </div>
     );
 }

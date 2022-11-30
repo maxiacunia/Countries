@@ -4,7 +4,6 @@
   width: 100%;
   height: 100%;
   min-height: 100vh;
-  /* background: url("../hojas-de-estilo/home-bg.jpg") no-repeat 50% 50%; */
   background-color: #dfdcdcb8;
   background-size: cover;
   display: table;
@@ -13,7 +12,6 @@
 }
 
 .inputs-container {
-  /* border: red 3px solid; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -40,7 +38,6 @@
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  /* border: red 3px solid; */
   justify-content: space-between;
 }
 
@@ -54,8 +51,6 @@
   color: #000;
   font-size: Roboto;
   border-bottom: #000 2px solid;
-  /* border: red 3px solid; */
-
   background-color: #f4e62a;
   font-weight: bold;
   margin-bottom: 10px;
@@ -131,31 +126,4 @@
 .filter-population option {
   color: #000;
   font-weight: bold;
-}
-
-.footer-conteiner {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  font-weight: bold;
-  font-style: Roboto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-elements p {
-  margin-bottom: 5px;
-}
-.iconos {
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.iconos a {
-  color: #000;
-  margin: 5px;
-  font-size: 30px;
 }
