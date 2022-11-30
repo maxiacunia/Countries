@@ -12,7 +12,6 @@ import Footer from './Footer';
 
 export default function Home(){
     const dispatch = useDispatch()
-    
     //Me trae todo lo que esta en el estado de countries (lee data del store)
     const allCountries = useSelector ((state) => state.countries)
     //paginado
@@ -25,10 +24,26 @@ export default function Home(){
     const indexOfFisrtCountry = indexOfLastCountry - countriesPerPage//0
     //Aca tengo los paises de la pagina actual(10)
     const currentCountries = allCountries.slice(indexOfFisrtCountry, indexOfLastCountry)
-
     const paginado = (pageNumber) =>{
         setCurrentPage(pageNumber)
     }
+
+    const nexthandler = () => {
+        const totalCountries = allCountries.length;
+        const nextPage = currentPage + 1;
+        const firstIndex = nextPage * countriesPerPage;
+        if(firstIndex === totalCountries) return;
+        setCountriesPerPAge(10);
+        setCurrentPage(nextPage)
+    }
+
+    const prevHandler = () => {
+        const prevPage = currentPage - 1;
+        if(prevPage < 0) return;
+        setCountriesPerPAge(10);
+        setCurrentPage(prevPage)        
+    }
+
     //despacha las acciones
     useEffect(()=>{
         dispatch(getCountries())
@@ -110,13 +125,15 @@ export default function Home(){
                     countriesPerPage={countriesPerPage}
                     allCountries={allCountries.length}
                     paginado={paginado}
+                    nexthandler={nexthandler}
+                    prevHandler={prevHandler}
                 />
             </div>
             <div className='card-container'>      
                 {
                 currentCountries?.map( (el) => {
                     return(
-                    <Fragment className='cartas'>
+                    <Fragment>
                         <Link to={'/countries/' + el.id}>
                             <Card image={el.image} name={el.name} continent={el.continent} key={el.id}/>
                         </Link>

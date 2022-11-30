@@ -1,12 +1,13 @@
 import React from 'react';
 import '../hojas-de-estilo/Paginado.css'
 
-export default function Paginado({countriesPerPage, allCountries, paginado}){
+export default function Paginado({countriesPerPage, allCountries, paginado, nexthandler, prevHandler}){
     //aca se genera un arreglo de numero que seria el page number
     const pageNumbers = []
     for (let i = 0; i < Math.ceil(allCountries/countriesPerPage); i++) {
         pageNumbers.push(i+1)
     }
+
 
     return(
         <nav className='contenedor-pagination'>
@@ -20,6 +21,10 @@ export default function Paginado({countriesPerPage, allCountries, paginado}){
                     ))
                 }
             </ul>
+            <div className='botones-pag'>
+                <button onClick={prevHandler}>Prev</button>
+                <button onClick={nexthandler}>Next</button>
+            </div>
         </nav>
     )
 }

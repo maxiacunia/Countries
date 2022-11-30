@@ -145,7 +145,6 @@
     align-items: center;
   }
   .inputs-container {
-    border: red solid;
     padding: 0px;
     flex-direction: row;
   }
