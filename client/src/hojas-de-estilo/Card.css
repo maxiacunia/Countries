@@ -4,6 +4,9 @@
   transition: 0.3s;
   border: solid #000;
   height: 400px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 /* On mouse-over, add a deeper shadow */
