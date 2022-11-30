@@ -58,3 +58,21 @@ body {
   -webkit-filter: saturate(0.2) opacity(0.5);
   cursor: not-allowed;
 }
+
+@media (max-width: 600px) {
+  .contenedor-bienvenida {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contenedor-bienvenida h1 {
+    align-items: center;
+    justify-content: center;
+    padding-left: 40px;
+  }
+  .button-32 {
+    width: 80%;
+    padding-left: 30px;
+    margin-left: 30px;
+  }
+}
