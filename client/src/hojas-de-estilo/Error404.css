@@ -1,0 +1,23 @@
+.contenedor-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #dfdcdcb8;
+}
+
+.content-elements-error {
+  border: #000 4px solid;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.content-elements-error h1 {
+  margin: auto;
+}
+
+.content-elements-error button {
+  margin-left: 700px;
+}

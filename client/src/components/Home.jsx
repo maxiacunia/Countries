@@ -131,10 +131,10 @@ export default function Home(){
                     Creado por <span>Maximiliano Acuña</span> 😀
                 </p>
                 <div className='iconos'>
-                    <a href='https://github.com/maxiacunia'>
+                    <a href='https://github.com/maxiacunia' target="_blank">
                         <FontAwesomeIcon icon={faGithub} />
                     </a>
-                    <a href='www.linkedin.com/in/maximiliano-acuña'>
+                    <a href='https://www.linkedin.com/in/maximiliano-acuña' target="_blank">
                         <FontAwesomeIcon icon={faLinkedin} />
                     </a>                   
                 </div>

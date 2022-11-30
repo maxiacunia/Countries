@@ -4,6 +4,7 @@ import LandingPage from './components/LandingPage'
 import Home from './components/Home'
 import ActivityCreate from './components/ActivityCreate'
 import Detail from './components/Detail';
+import Error from './components/Error404';
 
 
 
@@ -16,6 +17,7 @@ function App() {
         <Route exact path='/' component={LandingPage}/>
         <Route path='/home' component={Home}/>
         <Route path='/activity' component={ActivityCreate}/>
+        <Route path='*' component={Error}/>
       </Switch>
     </div>
     </BrowserRouter>
