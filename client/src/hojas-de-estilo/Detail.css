@@ -4,16 +4,15 @@
   justify-content: center;
   background-color: #dfdcdcb8;
   min-height: 100vh;
-  border: red solid;
 }
 
 .card-detail {
-  border: blue solid;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: antiquewhite;
+  border: #000 solid 2px;
 }
 
 .card-detail:hover {

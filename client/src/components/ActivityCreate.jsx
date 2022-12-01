@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
-import {Link, useHistory} from 'react-router-dom';
+import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 import {postActivity} from '../actions/index';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import '../hojas-de-estilo/ActivityCreate.css'
 
     function validate(input){
@@ -19,7 +19,6 @@ import '../hojas-de-estilo/ActivityCreate.css'
 
 export default function ActivityCreate(){
     const dispatch = useDispatch()
-    const history = useHistory()
 
     const [errors, setErrors] = useState({});
 
@@ -58,8 +57,6 @@ export default function ActivityCreate(){
     }
 
     function handleSubmit(e){
-        //e.preventDeault();
-        console.log(input);
         dispatch(postActivity(input))
         alert('Actividad Creada con exito !')
         setInput({
@@ -69,7 +66,6 @@ export default function ActivityCreate(){
             duration:'',
             season:''            
         })
-        //history.push('/activities')
     }
 
     return(

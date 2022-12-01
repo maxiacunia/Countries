@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import '../hojas-de-estilo/Card.css'
 
 export default function Card({image, name, continent}){

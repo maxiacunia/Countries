@@ -1,5 +1,5 @@
-import React, {useState, useEffect, Fragment} from 'react';
-import {Link, useHistory} from 'react-router-dom';
+import React, { useEffect, Fragment} from 'react';
+import {Link} from 'react-router-dom';
 import {getDetail} from '../actions/index';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from "react-router-dom";

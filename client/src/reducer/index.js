@@ -34,6 +34,18 @@ function rootReducer(state = initialState, action){
                 ...state,
                 countries: countriesFiltered
             }
+
+        case 'FILTER_BY_ACTIVITY':
+            const todos = state.allCountries
+            const countriesFilteredByAct = action.payload === 'all' ? todos : todos.filter(el => el.actividads && el.actividads.length > 0)
+            return{
+                ...state,
+                countries: countriesFilteredByAct
+            }
+
+
+
+
         case 'ORDER_BY_NAME':
             let sortedArr = action.payload === 'asc'?
                 state.countries.sort(function(a,b){

@@ -131,6 +131,22 @@
   font-weight: bold;
 }
 
+.filter-activity select {
+  cursor: pointer;
+  border: solid #000;
+  border-radius: 10rem;
+  background-color: #f4e62a;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px 15px;
+}
+
+.filter-activity option {
+  color: #000;
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 600px) {
   body {
     overflow-x: hidden !important;

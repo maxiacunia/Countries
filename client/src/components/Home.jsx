@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { useState, useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux'
-import { getCountries, filterByContinent, filterActivity, orderByName, orderByPopulation } from '../actions';
+import { getCountries, filterByContinent, filterByActivity, orderByName, orderByPopulation } from '../actions';
 import {Link} from 'react-router-dom';
 import Card from './Card';
 import Paginado from './Paginado';
@@ -59,6 +59,12 @@ export default function Home(){
         dispatch(filterByContinent(e.target.value));
     }
 
+    function handleFilterActivity(e){
+        e.preventDefault();
+        dispatch(filterByActivity(e.target.value));
+        console.log(e.target.value);
+    }
+
 
     function handleSort(e){
         e.preventDefault();
@@ -114,6 +120,12 @@ export default function Home(){
                         <select name='Filtrar por poblacion' onChange={e => handleSort2(e)}>
                             <option value='asc'>Menor poblacion</option>
                             <option value='desc'>Mayor poblacion</option>
+                        </select>
+                    </div>
+                    <div className='filter-activity input'>
+                        <select name='Filtrar por actividad' onChange={e => handleFilterActivity(e)}>
+                            <option value='all'>Todos</option>
+                            <option value='actividads'>Por actividad</option>
                         </select>
                     </div>
                 </div>

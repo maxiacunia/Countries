@@ -17,6 +17,13 @@ export function filterByContinent(payload){
     }
 }
 
+export function filterByActivity(payload){
+    return{
+        type: 'FILTER_BY_ACTIVITY',
+        payload
+    }
+}
+
 export function orderByName(payload){
     return{
         type: 'ORDER_BY_NAME',
