@@ -4,6 +4,7 @@
   justify-content: center;
   min-height: 100vh;
   background-color: #dfdcdcb8;
+  border: red solid;
 }
 
 .content-elements-error {
@@ -12,12 +13,10 @@
   flex-direction: column;
   padding: 10px;
   border-radius: 15px;
+  align-items: center;
+  justify-content: center;
 }
 
 .content-elements-error h1 {
   margin: auto;
-}
-
-.content-elements-error button {
-  margin-left: 700px;
 }

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, Fragment} from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import {getDetail} from '../actions/index';
 import { useDispatch, useSelector } from 'react-redux';
@@ -29,15 +29,37 @@ export default function Detail(){
                     />
                     <div className='conteiner-text'>
                         <h1>Pais: {myCountry.name}</h1>
-                        <h2>Codigo: {myCountry.id}</h2>
-                        <h2>Capital: {myCountry.capital}</h2>
-                        <h2>Subregion: {myCountry.subregion}</h2>
-                        <h2>Area: {myCountry.area}</h2>
-                        <h2>Poblacion: {myCountry.population}</h2>
+                        <h3>Codigo: {myCountry.id}</h3>
+                        <h3>Capital: {myCountry.capital}</h3>
+                        <h3>Subregion: {myCountry.subregion}</h3>
+                        <h3>Area: {myCountry.area}</h3>
+                        <h3>Poblacion: {myCountry.population}</h3>
+                        <hr/>
+                        {
+                            myCountry.hasOwnProperty('actividads') && myCountry.actividads.length > 0 ? 
+                            <Fragment>
+                            <h2>Actividades creadas:</h2>
+                            <h3>Name: {myCountry.actividads[0].name}</h3>
+                            <h3>Dificultad: {myCountry.actividads[0].difficulty}</h3>
+                            <h3>Duracion: {myCountry.actividads[0].duration}</h3>
+                            <h3>Temporada: {myCountry.actividads[0].season}</h3>
+                            </Fragment> 
+                            : 
+                            <Fragment>
+                                <h3>Este pais no tiene actividades creadas por el usuario</h3>
+                                <div className='button-detail'>
+                                <Link to='/activity'>
+                                    <button>Crear actividad</button>
+                                </Link>
+                                </div>
+                            </Fragment>
+                        }
                     </div>
-                    <Link to='/home'>
-                        <button>Volver</button>
-                    </Link>
+                    <div className='button-detail'>
+                        <Link to='/home'>
+                            <button>Volver</button>
+                        </Link>
+                    </div>
                     </div>
         </div>
     )
