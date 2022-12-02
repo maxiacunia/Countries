@@ -15,9 +15,7 @@ const { routes } = require('../app.js');
 const router = Router();
 
 const cors = require('cors');
-router.use(cors({
-    origin: 'http://localhost:3000'
-}));
+router.use(cors());
 
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
