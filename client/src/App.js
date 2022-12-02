@@ -6,7 +6,7 @@ import ActivityCreate from './components/ActivityCreate'
 import Detail from './components/Detail';
 import Error from './components/Error404';
 import axios from 'axios';
-axios.defaults.baseURL = 'http://localhost:3001/';
+axios.defaults.baseURL = 'https://countries-production-81b8.up.railway.app/';
 
 
 
