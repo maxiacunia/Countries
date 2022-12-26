@@ -23,7 +23,7 @@ server.use((req, res, next) => {
   next();
 });
 server.use(cors({
-  origin: ["http://localhost:3000", 'https://countries-fpdaevi29-maxiacunia.vercel.app'],
+  origin: ["http://localhost:3000", 'https://countries-five-coral.vercel.app'],
   methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
 }));
 
