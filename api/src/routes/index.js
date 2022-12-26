@@ -14,8 +14,8 @@ const { routes } = require('../app.js');
 
 const router = Router();
 
-var cors = require('cors')
-router.use(cors())
+// var cors = require('cors')
+// router.use(cors())
 
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
