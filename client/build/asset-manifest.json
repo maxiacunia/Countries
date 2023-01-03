@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ca8f588f.css",
+    "main.js": "/static/js/main.8f6bf587.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/greg-rosenke-1TjORT2dLOw-unsplash.jpg": "/static/media/greg-rosenke-1TjORT2dLOw-unsplash.dd3639f47fc5998a0cdc.jpg",
+    "index.html": "/index.html",
+    "main.ca8f588f.css.map": "/static/css/main.ca8f588f.css.map",
+    "main.8f6bf587.js.map": "/static/js/main.8f6bf587.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca8f588f.css",
+    "static/js/main.8f6bf587.js"
+  ]
+}

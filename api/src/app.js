@@ -16,14 +16,14 @@ server.use(bodyParser.json({ limit: '50mb' }));
 server.use(cookieParser());
 server.use(morgan('dev'));
 server.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://countries-five-coral.vercel.app'); // update to match the domain you will make the request from
+  res.header('Access-Control-Allow-Origin', '*'); // update to match the domain you will make the request from
   res.header('Access-Control-Allow-Credentials', 'true');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
   next();
 });
 // server.use(cors({
-//   origin: ["http://localhost:3000",'countries-production-81b8.up.railway.app'],
+//   origin: ["http://localhost:3001",'countries-production-81b8.up.railway.app'],
 //   methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
 // }));
 
